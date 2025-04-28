@@ -1,0 +1,276 @@
+.wedding-form-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff9f5; /* Soft cream background */
+  color: #5c4033;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #f8ede3 2%, transparent 10%),
+    radial-gradient(circle at 75% 45%, #f8ede3 2%, transparent 10%),
+    radial-gradient(circle at 50% 75%, #f8ede3 2%, transparent 10%),
+    linear-gradient(135deg, #fff9f5 0%, #faf0e6 100%);
+  background-size: 20px 20px, 20px 20px, 20px 20px, 100% 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0e6dd;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #5c4033;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.form-title:after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(to right, #d4a373, #e9c297, #f0d9c2);
+  margin: 15px auto 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(212, 163, 115, 0.3);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 35px;
+  background-color: #fef8f4; /* Lighter than container */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0e6dd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  flex: 1;
+  min-width: 220px; /* Slightly wider */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #5c4033;
+  position: relative;
+  padding-left: 12px;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+}
+
+.form-group label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: linear-gradient(to bottom, #d4a373, #e9c297);
+  border-radius: 2px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #f0e6dd;
+  background-color: #ffffff;
+  color: #5c4033;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #d4a373;
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+}
+
+.form-input::placeholder {
+  color: #b8a09e;
+  opacity: 0.8;
+}
+
+.date-input-container, .time-input-container, .select-container {
+  position: relative;
+}
+
+.calendar-icon, .time-icon, .select-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b8a09e;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Make icons brighter on input focus */
+.date-input-container:focus-within .calendar-icon,
+.time-input-container:focus-within .time-icon,
+.select-container:focus-within .select-icon {
+  opacity: 1;
+  color: #d4a373;
+}
+
+.select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8a09e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 45px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to right, #d4a373, #e9c297);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 30px;
+  box-shadow: 0 6px 15px rgba(212, 163, 115, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: transform 0.8s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #c69b68, #d4a373);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 163, 115, 0.3);
+}
+
+.submit-button:hover:before {
+  transform: translateX(200%);
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(212, 163, 115, 0.2);
+}
+
+.required {
+  color: #e27d60;
+  margin-left: 3px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .form-row {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .wedding-form-container {
+    padding: 20px;
+  }
+  
+  .form-title {
+    font-size: 1.6rem;
+  }
+}   
+
+/* Light theme focus styles */
+input:focus, select:focus {
+  border-color: #d4a373;
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.15);
+}
+
+/* Custom scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fef8f4;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e9c297;
+  border-radius: 5px;
+  border: 2px solid #fef8f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a373;
+}
+
+/* Subtle pulse animation for required fields */
+@keyframes pulse-border {
+  0% { border-color: #f0e6dd; }
+  50% { border-color: rgba(226, 125, 96, 0.5); }
+  100% { border-color: #f0e6dd; }
+}
+
+.form-input:invalid:focus {
+  animation: pulse-border 2s infinite;
+}
